@@ -1,6 +1,10 @@
 # INTRODUCTION #
 This repository contains a collection of code relevant to the 2018-19 Freshman Imaging Project in the Chester F. Carlson Center for Imaging Science at the Rochester Institute of Technology.  This project's goal is to create a multi-camera collection system to aid in the development of three-dimensional models of insects.
 
+The initial cloning of this repository should be carried out in your "src/python" directory by typing ...
+
+https://github.com/csalvaggio/fip2018.git .
+
 # INSTALLATION #
 The "misc" directory contains a standalone set of Python utility routines.  It can be installed at any location in your environement.
 
