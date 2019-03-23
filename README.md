@@ -3,7 +3,7 @@ This repository contains a collection of code relevant to the 2018-19 Freshman I
 
 The initial cloning of this repository should be carried out in your "src/python" directory by typing ...
 
-https://github.com/csalvaggio/fip2018.git .
+git clone https://github.com/csalvaggio/fip2018.git .
 
 # INSTALLATION #
 The "misc" directory contains a standalone set of Python utility routines.  It can be installed at any location in your environement.
