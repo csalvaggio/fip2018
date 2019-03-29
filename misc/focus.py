@@ -73,12 +73,11 @@ if camera_present:
 
    # Display live preview
    cmd = 'raspistill '
-   cmd += '--verbose '
    cmd += '--keypress '
    cmd += '--fullscreen '
    cmd += '--exposure auto '
    cmd += '--timeout 0 '
-   #os.system(cmd)
+   os.system(cmd)
 else:
    msg = 'No camera present at multiplexer position {0}'.format(position)
    print(msg)
