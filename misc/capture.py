@@ -49,16 +49,15 @@ gpio.output(11, False)
 gpio.output(12, True)
 capture(2)
 
-'''
 # Capture camera at multiplexer position 3
 gpio.output(7, False)
 gpio.output(11, True)
 gpio.output(12, False)
-capture(3)
+capture(3) 
 
 # Capture camera at multiplexer position 4
 gpio.output(7, True)
 gpio.output(11, True)
 gpio.output(12, False)
 capture(4)
-'''
+
