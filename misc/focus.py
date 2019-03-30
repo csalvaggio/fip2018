@@ -36,6 +36,8 @@ RPi.GPIO.setup(16, RPi.GPIO.OUT)
 RPi.GPIO.setup(21, RPi.GPIO.OUT)
 RPi.GPIO.setup(22, RPi.GPIO.OUT)
 
+RPi.GPIO.output(11, RPi.GPIO.HIGH)
+RPi.GPIO.output(12, RPi.GPIO.HIGH)
 RPi.GPIO.output(15, RPi.GPIO.HIGH)
 RPi.GPIO.output(16, RPi.GPIO.HIGH)
 RPi.GPIO.output(21, RPi.GPIO.HIGH)
@@ -66,13 +68,21 @@ camera_present = True if detected == 1 else False
 
 if camera_present:
    # Display user instructions
-   msg = 'Live preview for multiplexer position {0}'.format(position)
+   msg = '*** Live preview for multiplexer position {0} ***'.format(position)
    print(msg)
-   msg = 'Press "x" then "<Enter>" to exit ...'
+   msg = '\n*** IMPORTANT NOTE ***'
+   print(msg)
+   msg = 'HDMI cable should be connected directly to the Pi that this script'
+   print(msg)
+   msg = 'is running on as the Pi camera\'s preview window is displayed as an'
+   print(msg)
+   msg = 'overlay on the GPU and will not display properly over an ssh tunnel'
    print(msg)
 
    # Display live preview
    cmd = 'raspistill '
+   cmd += '--preview '
+   cmd += '--verbose '
    cmd += '--keypress '
    cmd += '--fullscreen '
    cmd += '--exposure auto '
