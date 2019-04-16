@@ -8,8 +8,13 @@ def capture(cam):
 
    captureFilename = '/tmp/{0}_camera{1}'.format(ip, cam)
    cmd = 'raspistill '
-   cmd += '-t 1 '
-   cmd += '-o ' + captureFilename + '.jpg'
+   cmd += '--nopreview '
+   cmd += '--timeout 2000 '  # Allow camera to "warm up" for 2 seconds
+#   cmd += '--awb auto '      # Automatic mode [default]
+   cmd += '--awb off '       # Turn off the automatic white balance calculation
+   cmd += '--awb tungsten '  # Tungsten lighting mode (between 2500K and 3500K)
+                             # (measured color temperature was 3400K)
+   cmd += '--output ' + captureFilename + '.jpg'
    os.system(cmd)
 
 

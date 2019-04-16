@@ -8,13 +8,8 @@ print('Initializing slave node ...')
 
 # Create the full path to the trigger file
 home = os.path.expanduser('~')
-
-# Create a path to the lock file
 locksPath = os.path.join(home, 'tmp')
 triggerFile = os.path.join(locksPath, 'trigger_cameras.lock')
-
-# Create a path to the shared image directory
-imagesPath = os.path.join(home, 'data')
 
 # Create the capture command
 capture = os.path.join(home, 'src')
